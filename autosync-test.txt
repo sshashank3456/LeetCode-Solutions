@@ -1,0 +1,5 @@
+LeetCode AutoSync is connected successfully!
+
+This file was created by my Chrome extension.
+
+GitHub user: sshashank3456
