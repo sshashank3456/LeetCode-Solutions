@@ -4,6 +4,8 @@ class Solution:
         maxsub=nums[0]
         res= nums[0]
         for i in range(1, n):
-            maxsub= max(maxsub + nums[i], nums[i])
+            v1= maxsub + nums[i]
+            v2= nums[i]
             res= max(res, maxsub)
+            maxsub= max(v1, v2)
         return res
