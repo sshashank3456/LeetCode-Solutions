@@ -1,13 +1,14 @@
 class Solution:
     def maximumSum(self, arr: List[int]) -> int:
-        nodelete= arr[0]
-        onedelete= float('-inf')
-        for i in range(1, len(arr)):
-            prevnodelete= nodelete
-            prevonedelete= onedelete
-            nodelete= max(nodelete + arr[i], arr[i])
-            v2= prevonedelete+ arr[i]
-            onedelete= max(prevnodelete, v2)
-            res= max(res, max(onedelete, nodelete))
+        n=len(arr)
+        nodel= arr[0]
+        onedel= float('-inf')
+        res= arr[0]
+        for i in range(1, n):
+            prevnodel= nodel
+            prevonedel= onedel
+            nodel= max(nodel + arr[i], arr[i])
+            v2= prevonedel + arr[i]
+            onedel= max(v2, prevnodel)
+            res= max(res, onedel, nodel)
         return res
-        res=arr[0]
