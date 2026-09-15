@@ -1,12 +1,13 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        fir= {}
-        for i in s:
-            if i in fir:
-                fir[i]= fir[i]+1
+        n= len(s)
+        res= {}
+        for i in range(n):
+            if s[i] in res:
+                res[s[i]]+=1
             else:
-                fir[i]= 1
-        for i in range(len(s)):
-            if fir[s[i]] == 1:
+                res[s[i]] = 1
+        for i in range(n):
+            if res[s[i]] == 1:
                 return i
         return -1
