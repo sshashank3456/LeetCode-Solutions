@@ -8,4 +8,4 @@ class Solution:
                 low= guess + 1
             else:
                 high= guess -1
-            return low
+        return low
